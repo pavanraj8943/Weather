@@ -1,3 +1,19 @@
+
+function updateDateTime() {
+  const now = new Date();
+  const optionsDate = { day: "2-digit", month: "short", year: "numeric" };
+  const optionsTime = { hour: "2-digit", minute: "2-digit", second: "2-digit" };
+
+  document.getElementById("date").innerText = now.toLocaleDateString("en-GB", optionsDate);
+  document.getElementById("time").innerText = now.toLocaleTimeString("en-GB", optionsTime);
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
+
+
+
+
 document.getElementById("search").addEventListener("click", async () => {
     const city = document.getElementById("city").value.trim();
     const display = document.getElementById("display");
