@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Weather App</title>
+</head>
+
+<body id="body"
+  class="min-h-screen bg-cover bg-center bg-no-repeat text-white relative transition-all duration-700"
+  style="background-image: url('pexels-pixabay-209831.jpg');">
+
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- 🌤️ Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full z-30 bg-black/40 backdrop-blur-md text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+
+
+      <h1 class="text-2xl font-bold tracking-wide">🌦️ WeatherApp</h1>
+
+      <div class="flex items-center gap-3 px-4 py-2 rounded-2xl  ">
+        <input id="city" type="text" placeholder="Enter your city..."
+          class="w-56 px-3 py-2 rounded-lg bg-transparent border border-white/30 text-white focus:outline-none focus:border-blue-400 transition placeholder-white/70" />
+        <button id="search"
+          class="bg-blue-500 hover:bg-blue-600 transition px-5 py-2 rounded-lg text-white font-medium shadow-lg">
+          Search
+        </button>
+      </div>
+
+      <button
+        class="bg-blue-500 hover:bg-blue-600 transition px-5 py-2 rounded-lg font-medium shadow-lg">
+        Login
+      </button>
+    </div>
+  </nav>
+
+
+  <div class="relative z-10 flex flex-col justify-center h-screen p-10">
+    <div id="display" class="w-full p-8 text-center space-y-6">
+      <h1 class="text-4xl font-semibold text-white/90">Weather Info</h1>
+      <p class="text-white/70 text-lg">
+        Enter a city name to get real-time weather updates 🌦️
+      </p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
